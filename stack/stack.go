@@ -15,7 +15,9 @@ type Stack struct {
 func (s *Stack) Push(i int) {
 	next := s.first
 	first := &linkedlist.Node{Item: i}
-	first.Next = next
+	if next != nil {
+		first.Next = next
+	}
 	s.first = first
 }
 
