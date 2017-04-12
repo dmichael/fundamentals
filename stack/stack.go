@@ -8,21 +8,21 @@ import (
 
 // Stack is a structure holding the linked list
 type Stack struct {
-	Head *linkedlist.Node
+	first *linkedlist.Node
 }
 
 // Push adds an item to the list
 func (s *Stack) Push(i int) {
-	head := s.Head
+	next := s.first
 	first := &linkedlist.Node{Item: i}
-	first.Next = head
-	s.Head = first
+	first.Next = next
+	s.first = first
 }
 
 // Pop adds an item to the list
 func (s *Stack) Pop() interface{} {
-	head := s.Head
-	s.Head = head.Next
+	head := s.first
+	s.first = head.Next
 	return head.Item
 }
 
@@ -33,7 +33,7 @@ func NewStack() *Stack {
 
 // PrintValues is a utility method so we can see whats in our stack
 func (s *Stack) PrintValues() {
-	current := s.Head
+	current := s.first
 	for current != nil {
 		fmt.Println(current.Item)
 		current = current.Next
