@@ -1,6 +1,6 @@
 # Fundamentals
 
-This repository aims to collect some fundamental computer science fundamentals implemented in Golang.
+This repository aims to collect some computer science fundamentals implemented in Golang.
 
 ## Data Structures (Abstract Data Types)
 
