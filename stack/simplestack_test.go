@@ -1,4 +1,4 @@
-package stacks
+package stack
 
 import (
 	"reflect"
@@ -7,8 +7,8 @@ import (
 
 var fixture = []int{5, 4, 3}
 
-func setup() *Stack {
-	s := NewStack()
+func setup() *SimpleStack {
+	s := NewSimpleStack()
 	for _, val := range fixture {
 		s.Push(val)
 	}
